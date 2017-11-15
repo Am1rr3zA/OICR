@@ -1,0 +1,41 @@
+# Compiled class file
+*.class
+
+# Log file
+*.log
+
+# Package Files #
+*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+
+# build/dev artefacts
+**/target
+
+# IDE projects
+##############
+**/.idea
+**/.classpath
+**/.project
+**/.cache
+**/.settings
+**/.pydevproject
+*~
+*#
+*.swo
+*.iml
+
+# OS generated files
+####################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
