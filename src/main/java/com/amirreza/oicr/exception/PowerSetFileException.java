@@ -1,10 +1,10 @@
-package com.amirreza.exception;
+package com.amirreza.oicr.exception;
 
 /**
  * @author Amirreza Soudi
  * @since 2017-11-15.
  */
-public class PowerSetFileException extends Exception {
+public class PowerSetFileException extends RuntimeException {
     public PowerSetFileException() {
     }
 

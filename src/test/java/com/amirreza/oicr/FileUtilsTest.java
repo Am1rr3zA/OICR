@@ -1,6 +1,6 @@
 package com.amirreza.oicr;
 
-import com.amirreza.exception.PowerSetFileException;
+import com.amirreza.oicr.exception.PowerSetFileException;
 import com.amirreza.oicr.util.FileUtils;
 import org.junit.Rule;
 import org.junit.Test;
