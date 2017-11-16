@@ -31,6 +31,18 @@ public class PowerSetTest {
         assertEquals(expectedPowerSetResult, powerSetResult);
     }
 
+    @Test
+    public void computeLargePowerSet() {
+        Set<String> inputSet = new HashSet<>();
+        for (int i = 0; i < 20 ; i++) {
+            inputSet.add(String.valueOf((int) (Math.random() * 10000)));
+        }
+
+        Set<Set<String>> powerSetResult = PowerSet.computePowerSet(inputSet);
+
+        assertEquals((long) Math.pow(2, inputSet.size()), powerSetResult.size());
+    }
+
 
     @Test
     public void computePowerSetOfEmptySet() {

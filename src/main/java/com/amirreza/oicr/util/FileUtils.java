@@ -21,6 +21,14 @@ import java.util.stream.Stream;
 public class FileUtils {
     final static Logger LOGGER = Logger.getLogger(FileUtils.class);
 
+    /**
+     * read the file that each line contains a value of input set and
+     * return a set of those values
+     *
+     * @param path path to the input file
+     * @return a Set from input file's lines
+     * @throws PowerSetFileException in case of having trouble reading teh input file
+     */
     public static Set<String> readFile(String path) throws PowerSetFileException {
         try (Stream<String> stream = Files.lines(Paths.get(path))) {
 
@@ -34,6 +42,12 @@ public class FileUtils {
         }
     }
 
+    /**
+     * write each subset in a single line with format { v1, v2, ...}
+     *
+     * @param outputfile the path to teh output file
+     * @param powerSet set of set of String that contains all subset
+     */
     public static void writeToFile(String outputfile, Set<Set<String>> powerSet) {
         Path path = Paths.get(outputfile);
 

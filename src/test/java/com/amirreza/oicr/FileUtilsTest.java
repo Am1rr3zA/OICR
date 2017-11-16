@@ -32,6 +32,14 @@ public class FileUtilsTest {
         assertEquals(expectedSet, inputFromFile);
     }
 
+    @Test
+    public void readFileWithRedundantValue() throws PowerSetFileException {
+        URL url = this.getClass().getResource("/input-redundant-test.txt");
+        Set<String> inputFromFile = FileUtils.readFile(url.getFile());
+
+        assertEquals(5, inputFromFile.size());
+    }
+
     @Test(expected = PowerSetFileException.class)
     public void testFileNotExistThrowException() throws PowerSetFileException {
         FileUtils.readFile("SomeRandomFile.txt");
